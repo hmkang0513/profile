@@ -1,0 +1,151 @@
+:root {
+  --font-kr: 'Jua', 'Baloo 2', sans-serif;
+  --font-jp: 'Zen Maru Gothic', 'Jua', sans-serif;
+  --font-body: 'Nunito', 'Jua', 'Zen Maru Gothic', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-kr);
+  font-weight: 700;
+}
+
+.font-heading-jp {
+  font-family: var(--font-jp);
+  font-weight: 700;
+}
+
+/* When Japanese is active, headings switch to the JP round font */
+html.jp .font-heading {
+  font-family: var(--font-jp);
+}
+
+/* ===== Nav links ===== */
+.nav-link {
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #64748b;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav-link:hover {
+  background-color: #e3f2ff;
+  color: #57a3ee;
+}
+.nav-link.active {
+  background-color: #c9e6ff;
+  color: #2b7fd6;
+}
+
+/* ===== Skill chips ===== */
+.skill-chip {
+  padding: 0.6rem 1.3rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 16px -8px rgba(87, 163, 238, 0.4);
+  transition: transform 0.2s ease;
+}
+.skill-chip:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* ===== Project cards ===== */
+.project-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e3f2ff;
+  border-radius: 1.75rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(87, 163, 238, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px -12px rgba(87, 163, 238, 0.4);
+}
+.project-card.border-dashed {
+  border-style: dashed;
+  border-color: #c9e6ff;
+  opacity: 0.9;
+}
+
+.tag-chip {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 9999px;
+  background: #f3f9ff;
+  color: #57a3ee;
+  border: 1px solid #c9e6ff;
+}
+
+/* ===== Scroll reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Floating blobs ===== */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(50px);
+  opacity: 0.55;
+  animation: float 9s ease-in-out infinite;
+}
+.blob-a {
+  width: 320px;
+  height: 320px;
+  background: #c9e6ff;
+  top: -80px;
+  left: -80px;
+}
+.blob-b {
+  width: 260px;
+  height: 260px;
+  background: #ffd3e6;
+  top: 30%;
+  right: -100px;
+  animation-delay: -3s;
+}
+.blob-c {
+  width: 240px;
+  height: 240px;
+  background: #ddd0ff;
+  bottom: -60px;
+  left: 30%;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-24px) translateX(14px); }
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f9ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #a6d5ff;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7cbdfb;
+}

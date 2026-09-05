@@ -1,0 +1,13 @@
+{
+  "name": "hyemi-kang-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "강혜미 / カンヘミ 개인 프로필 웹사이트",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
